@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { CommentInfo } from '../CommentInfo';
 import './CommentList.scss';
 
@@ -10,9 +9,7 @@ export const CommentList = ({ comments }) => {
   return (
     <div className="CommentList">
       {comments.map(comment => (
-        <Fragment key={comment.id}>
-          <CommentInfo comment={comment} />
-        </Fragment>
+        <CommentInfo key={comment.id} comment={comment} />
       ))}
     </div>
   );
